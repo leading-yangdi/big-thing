@@ -21,10 +21,9 @@
     <div class="loginAndRegBox">
         <div class="title-box"></div>
         <!-- 登录的div -->
-        <!-- 登录的div -->
         <div class="login-box">
             <!-- 登录的表单 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" id="form_login">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -34,7 +33,7 @@
                 <!-- 密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
                         autocomplete="off" class="layui-input" />
                 </div>
                 <!-- 登录按钮 -->
@@ -48,10 +47,9 @@
             </form>
         </div>
         <!-- 注册的div -->
-        <!-- 注册的div -->
         <div class="reg-box">
             <!-- 注册的表单 -->
-            <form class="layui-form" action="">
+            <form class="layui-form" id="form_reg">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
@@ -81,7 +79,15 @@
             </form>
         </div>
     </div>
+
+    <!-- 导入 Layui 的JS文件 -->
     <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 导入 JQuery -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 导入自己封装的 baseAPI.js -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 导入自己的 JavaScript 脚本 -->
+    <script src="/assets/js/login.js"></script>
 </body>
 
 </html>
